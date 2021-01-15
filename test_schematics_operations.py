@@ -34,6 +34,6 @@ def main(args):
     if 'workspace_id' in args:
         ws = args['workspace_id']
     
-    return func(api_key, ws, count)
+    return func(api_key, ws, int(count))
     
     
