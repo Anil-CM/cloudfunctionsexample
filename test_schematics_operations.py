@@ -16,7 +16,7 @@ def func(api_key, workspace_id, count):
         t_data = copy.deepcopy(temp_data)
         t_data[0]['variablestore']=[]
         for variable in temp_data[0]['variablestore']:
-            if variable['name'] == 'count':
+            if variable['name'] == 'instance_count':
                 variable['value'] += count
             t_data[0]['variablestore'].append(variable)    
         print(schematics_service.update_workspace(w_id=workspace_id, template_data=t_data))
